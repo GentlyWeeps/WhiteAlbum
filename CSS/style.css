@@ -1,10 +1,12 @@
 html{
 	height: 100%;
+	
 }
 body {
 	height: 100%;
 	/* background-size: cover; image size */
 	/* background-repeat: no-repeat; */ 
+	
 }
 div.thebig {
 	width: 1200px;
@@ -14,7 +16,7 @@ div.thebig {
 	margin-top: 150px;
 	
 }
-div.Icons {
+div.content {
 	padding-top: 50px;
 	padding-left: 70px;
 }
@@ -23,13 +25,14 @@ div.btd {
 	bottom: 0;
 	right: 1;
 }
-ul{ /* the list in respect to the rest of the website ?? */
+ul.nav{ /* the list in respect to the rest of the website ?? */
+	opacity: 0.9;
 	position: fixed;
 	top:0;
 	right: -10px;
 	margin: 0 ;
 	list-style-type: none;
-	background-color: #3C3C3C; 
+	background-color:black; 
 	width: 100%;
 }
 li{ /* affects the list */
@@ -40,6 +43,7 @@ li a{  /* only affects the text*/
 	color: white;
 	padding: 20px 40px;
 	text-align: center;
+	line-height: 20px;
 	text-decoration: none;
 }
 .parallax {
@@ -49,4 +53,21 @@ li a{  /* only affects the text*/
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size:cover;
+	/* blur the background */
+}
+.logo {
+	font-size: 25px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+tr {
+	text-align: left;
+}
+.divider {
+	height: 5px;
+	width: 1030px;
+	background-color: black;
+
+}
+p {
+	padding-top: 10px;
 }
