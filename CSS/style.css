@@ -19,8 +19,6 @@ div.icons {
 }
 div.btd {
 	position: fixed;
-	bottom: 0;
-	right: 0;
-	height: 385px; 
-	width: 680px;
+	bottom: 1;
+	right: 1;
 }
