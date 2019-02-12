@@ -12,7 +12,8 @@ p.one {
 	background-color: #7D726F;
 }
 div.thebig {
-	background-size: cover;
+	width: 800px;
+	height: 1000px;
 	background-color: grey;
 }
 div.icons {
