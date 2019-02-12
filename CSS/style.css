@@ -24,9 +24,11 @@ div.btd {
 ul{ /* the list in respect to the rest of the website ?? */
 	position: fixed;
 	top:0;
+	right: -10px;
 	margin: 0 ;
 	list-style-type: none;
 	background-color: #3C3C3C; 
+	width: 100%;
 }
 li{ /* affects the list */
 	float: left; /* makes the list go to one side?? */
