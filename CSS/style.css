@@ -72,6 +72,8 @@ p {
 	padding-top: 10px;
 	color:white;
 	font-family:"Arial Black", Gadget, sans-serif;
+	text-indent:30px;
+	text-align: justify;
 }
 h1 {
 	font-family: "Arial Black", Gadget, sans-serif;
@@ -91,4 +93,15 @@ button {
 	border: none;
 	padding: 20px 10px;
 	display: block;
+}
+.pst {
+	width: 92%;
+}
+.place1{
+	float:right;
+	padding:0px 0px 0px 20px; 
+}
+.place2{
+	float:left;
+	padding:0px 20px 0px 0px; 
 }
