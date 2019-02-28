@@ -24,6 +24,8 @@ div.btd {
 	position: fixed;
 	bottom: 0;
 	right: 1;
+	height:10px;
+	width:15px;
 }
 ul.nav{ /* the list in respect to the rest of the website ?? */
 	opacity: 0.9;
