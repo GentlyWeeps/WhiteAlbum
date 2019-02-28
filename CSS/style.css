@@ -98,6 +98,7 @@ button {
 }
 .pst {
 	width: 92%;
+	padding-top: 10px;
 }
 .place1{
 	float:right;
@@ -106,4 +107,24 @@ button {
 .place2{
 	float:left;
 	padding:0px 20px 0px 0px; 
+}
+
+h2 {
+	padding-top: 10px;
+	color:white;
+}
+.block {
+	height:100px;
+	width:100px;
+	background-color: red;
+	animation-name: block;
+	animation-duration:2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes block {
+	0% {background-color:red;}
+	50% {background-color:black;
+		transform: translateX(100px);}
+	0% {background-color:red;}
 }
