@@ -141,3 +141,18 @@ h2 {
 	100&{background-color:yellow; width:100px}
 }
 /* transform: translateX(500px); */
+
+.bars {
+	height:200px;
+	width:50px;
+	background-color:white;
+	animation: bars 0.5s linear infinite;
+	animation-play-state: paused;
+	margin: 0 50px;
+}
+.bars:hover {
+	animation-play-state: running;
+}
+@keyframes bars {
+	100%{transform:rotate(180deg);}
+}
