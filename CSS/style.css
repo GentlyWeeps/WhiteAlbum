@@ -36,6 +36,7 @@ ul.nav{ /* the list in respect to the rest of the website ?? */
 	list-style-type: none;
 	background-color:black; 
 	width: 100%;
+	z-index: 2;
 }
 li{ /* affects the list */
 	float: left; /* makes the list go to one side?? */
