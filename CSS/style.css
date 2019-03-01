@@ -124,36 +124,3 @@ h2 {
 	padding-top: 10px;
 	color:white;
 }
-.block {
-	border-radius:10px;
-	height: 100px;
-	width:100px;
-	background-color: yellow;
-	animation-name: block;
-	animation-duration:4s;
-	animation-iteration-count: infinite;
-}
-
-@keyframes block {
-	0% {background-color:yellow;}
-	25%{}
-	50% {background-color:orange; width:900px;}
-	75% {background-color:red;}
-	100&{background-color:yellow; width:100px}
-}
-/* transform: translateX(500px); */
-
-.bars {
-	height:200px;
-	width:50px;
-	background-color:white;
-	animation: bars 0.5s linear infinite;
-	animation-play-state: paused;
-	margin: 0 50px;
-}
-.bars:hover {
-	animation-play-state: running;
-}
-@keyframes bars {
-	100%{transform:rotate(180deg);}
-}
