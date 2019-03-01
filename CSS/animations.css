@@ -37,9 +37,24 @@
 	height:30px;
 	width:30px;
 	border-radius: 200px;
-	background-color: white;
-	transition:width 1.5s;
+	background-color: #FFDC00;
+	transition:width 1.1s;
+	animation-name:grid;
+	animation-iteration-count: infinite;
+	animation-duration: 2s;
 }
 .grid:hover {
 	width: 300px;
+}
+@keyframes grid {
+	0% {background-color:#FFDC00;}
+	10%{background-color:#FF851B;}
+	20%{background-color:#FF4136;}
+	30%{background-color:purple;}
+	40%{background-color:#39CCCC;}
+	50%{background-color:#2ECC40;}
+	70%{background-color:purple;}
+	80%{background-color:#FF4136;}
+	90%{background-color:#FF851B;}
+	100%{background-color:#FFDC00;}
 }
