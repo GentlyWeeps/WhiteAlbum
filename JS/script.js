@@ -18,9 +18,9 @@ function productNegative() {
 	var num3=prompt("What is the third number:");
 	var product=num1+num2+num3;
 	if (product > 0) {
-		alert(The product is positive);
+		alert("The product is positive");
 	}
 	if (product < 0) {
-		alert(The product is negative);
+		alert("The product is negative");
 	}
 }
