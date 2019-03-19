@@ -7,9 +7,11 @@ function largerNumber(){
 	var num2=prompt("What is the second number:");
 	if (num1>num2) {
 		alert(num1 + " is the larger number");
+		console.log(num1);
 	}
 	if (num2>num1) {
 		alert(num2 + " is the larger number");
+		console.log(num2);
 	}
 }
 function productNegative() {
@@ -23,4 +25,12 @@ function productNegative() {
 	if (product < 0) {
 		alert("The product is negative");
 	}
+}
+function order() {
+	var num1,num2,num3,num4
+	for(var i = 1; i <= 4; i++) {
+		var = num+i
+		prompt("What is number " + i);
+	}
+	alert(num1,num2);
 }
