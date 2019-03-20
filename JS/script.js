@@ -3,8 +3,8 @@ function welcomeUser() {
 	alert("Welcome! " + name);
 }
 function largerNumber(){
-	var num1=prompt("What is the first number:");
-	var num2=prompt("What is the second number:");
+	var num1=prompt("What is the third number:");
+	var num2=prompt("What is the ninth number:");
 	if (num1>num2) {
 		alert(num1 + " is the larger number");
 		console.log(num1);
@@ -26,11 +26,11 @@ function productNegative() {
 		alert("The product is negative");
 	}
 }
-function order() {
-	var num1,num2,num3,num4
-	for(var i = 1; i <= 4; i++) {
-		var = num+i
-		prompt("What is number " + i);
-	}
-	alert(num1,num2);
-}
+//function order() {
+//	var num1,num2,num3,num4
+//	for(var i = 1; i <= 4; i++) {
+//		var = num+i
+//		prompt("What is number " + i);
+//	}
+	
+//}
