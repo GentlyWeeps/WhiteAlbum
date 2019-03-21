@@ -3,8 +3,8 @@ function welcomeUser() {
 	alert("Welcome! " + name);
 }
 function largerNumber(){
-	var num1=prompt("Enter the first number:");
-	var num2=prompt("Enter the second number:");
+	var num1=parseInt(prompt("Enter the first number:"));
+	var num2=parseInt(prompt("Enter the second number:"));
 	if (num1>num2) {
 		alert(num1 + " is the larger number");
 		console.log(num1);
@@ -34,3 +34,4 @@ function productNegative() {
 //	}
 	
 //}
+function order()
