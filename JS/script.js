@@ -26,6 +26,7 @@ function productNegative() {
 		alert("The product is negative");
 	}
 }
+/*
 function order() {
 	var num1=parseInt(prompt("Enter the first number:"));
 	var num2=parseInt(prompt("Enter the second number:"));
@@ -34,4 +35,4 @@ function order() {
 		alert(num1 + "," + num2 + "," + num3);
 	}
 	if()
-}
+} */
