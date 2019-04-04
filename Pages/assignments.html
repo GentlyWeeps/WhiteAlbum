@@ -23,13 +23,16 @@
 								<p>This page is where all my assignments will be posted</p>
 						</div>
 						<br>
-						<p>Larger Number</p><button onclick="largerNumber()">Assignment 1</button>
+						<p>Larger Number: This program prompts the user for 2 numbers and alerts the larger one</p>
+						<button onclick="largerNumber()">Assignment 1</button>
 						<br>
+						<p>Negative Product: This program prompts the user for 2 numbers and alerts the if the sum is negative of positive</p>
 						<button onclick="productNegative()">Assignment 2</button>
 						<br>
 						<button onclick="order()">Assignment 3</button>
 						<br>
-						<button>Assignment 4</button>
+						<p>Patter: This program prompts the user for a string to make the pattern with and the number of rows. The output is displayed in the console</p>
+						<button onclick="pattern()">Assignment 4</button>
 						<br>
 						<button>Assignment 5</button>
 						<br>
@@ -52,5 +55,15 @@
 			<p class="footer" style="float:left;">Siddarth K</p>
 			<p class="footer" style="float:right;">Contact information: 721449@pdsb.net</p>
 		</div>
+		<script>
+			function pattern() 
+			{
+				var rows = parseInt(prompt("How many rows?"));
+				var symbol = prompt("what Symbol do you want to repeat?");
+				for(i=0;i<rows;i++) {
+					console.log(symbol.repeat(rows));
+				}
+			}
+		</script>
 	</body>
 <html>
