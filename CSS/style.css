@@ -102,9 +102,10 @@ th {
 }
 button {
 	background-color:#16D455;
-	size: 40px;
+	height: 70px;
+	width:100px;
 	border: none;
-	padding: 30px 20px;
+	padding: 30px 2	0px;
 	display: block;
 }
 .pst {
@@ -123,4 +124,9 @@ button {
 h2 {
 	padding-top: 10px;
 	color:white;
+}
+.assignmentbox {
+	height:200;
+	width:800;
+	background-color:black;
 }

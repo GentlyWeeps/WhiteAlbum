@@ -22,19 +22,22 @@
 						<div class="pst">
 								<p>This page is where all my assignments will be posted</p>
 						</div>
-						<br>
-						<p>Larger Number: This program prompts the user for 2 numbers and alerts the larger one</p>
-						<button onclick="largerNumber()">Assignment 1</button>
-						<br>
-						<p>Negative Product: This program prompts the user for 2 numbers and alerts the if the sum is negative of positive</p>
-						<button onclick="productNegative()">Assignment 2</button>
-						<br>
-						<button onclick="order()">Assignment 3</button>
-						<br>
-						<p>Patter: This program prompts the user for a string to make the pattern with and the number of rows. The output is displayed in the console</p>
-						<button onclick="pattern()">Assignment 4</button>
-						<br>
-						<button>Assignment 5</button>
+						<h1>Fuctions</h1>
+							<div class="assignmentbox">
+								<br>
+									<button onclick="largerNumber()">Assignment 1</button><p>Larger Number: This program prompts the user for 2 numbers and alerts the larger one</p>
+								<br>
+									<button onclick="productNegative()">Assignment 2</button><p>Negative Product: This program prompts the user for 2 numbers and alerts the if the sum is negative of positive</p>
+								<br>
+									<button onclick="order()">Assignment 3</button><p>Order: This program will place 4 numbers that are input into ascending order </p>
+							</div>
+							<br>
+						<div>
+							<h1>JS Loops</h1>
+							<button onclick="pattern()">Assignment 4</button><p>Patter: This program prompts the user for a string to make the pattern with and the number of rows. The output is displayed in the console</p>
+							<br>
+							<button onclick="guess()">Assignment 5</button>
+						</div>
 						<br>
 						<button>Assignment 6</button>
 						<br>
@@ -56,6 +59,23 @@
 			<p class="footer" style="float:right;">Contact information: 721449@pdsb.net</p>
 		</div>
 		<script>
+			function guess()
+			{
+				var num1   = 13;
+				var guess = parseInt(prompt("I'm thinking of a number"));
+		    	while(true) {
+		    		if(guess==num1) {
+		    			window.alert("you got it");
+		    			break;	
+		    		}
+		    		if(guess>num1) {
+		    			var guess = parseInt(prompt("The number is lower"));
+		    		}
+		    		if(guess<num1) {
+		    			var guess = parseInt(prompt("The number is higher"));
+		    		}
+		    	}		
+			}
 			function pattern() 
 			{
 				var rows = parseInt(prompt("How many rows?"));
