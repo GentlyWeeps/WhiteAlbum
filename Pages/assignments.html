@@ -29,17 +29,19 @@
 									<button onclick="productNegative()">Assignment 2</button><p>Negative Product: This program prompts the user for 2 numbers and alerts the if the sum is negative of positive</p>
 								<br>
 									<button onclick="order()">Assignment 3</button><p>Order: This program will place 4 numbers that are input into ascending order </p>
-							</div>
 							<br>
+						</div>
 						<div>
+						<div class="assignmentbox">
 							<h1>JS Loops</h1>
 							<button onclick="pattern()">Assignment 4</button><p>Patter: This program prompts the user for a string to make the pattern with and the number of rows. The output is displayed in the console</p>
 							<br>
-							<button onclick="guess()">Assignment 5</button>
+							<button onclick="guess()">Assignment 5</button><p>Guess Game: This program will give you a number to guess, and provide feedback to adjust the value to guess the right number<p> 
 						</div>
 						<br>
-						<button>Assignment 6</button>
+						<button onclick="list()">Assignment 6</button>
 						<br>
+						</div>
 						<button>Assignment 7</button>
 						<br>
 						<button>Assignment 8</button>
@@ -65,7 +67,7 @@
 				var guess = parseInt(prompt("I'm thinking of a number"));
 		    	while(true) {
 		    		if(guess==num1) {
-		    			window.alert("you got it");
+		    			window.alert("You got it");
 		    			break;	
 		    		}
 		    		if(guess>num1) {
@@ -83,6 +85,11 @@
 				for(i=0;i<rows;i++) {
 					console.log(symbol.repeat(rows));
 				}
+			}
+			function list() {
+				var list1=[];
+				var user="";
+				while()
 			}
 		</script>
 	</body>

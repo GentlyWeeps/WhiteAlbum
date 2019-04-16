@@ -106,12 +106,12 @@ button {
 	width:100px;
 	border: none;
 	padding: 30px 2	0px;
-	display: block;
-	left:100px;
+	display: block;																			
 }
 .pst {
 	width: 1030px;
-	padding-top: 10px;
+	padding-top: 10px;	
+
 }
 .place1{
 	float:right;
