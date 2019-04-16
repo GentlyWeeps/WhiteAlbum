@@ -107,6 +107,7 @@ button {
 	border: none;
 	padding: 30px 2	0px;
 	display: block;
+	left:100px;
 }
 .pst {
 	width: 1030px;
@@ -125,8 +126,8 @@ h2 {
 	padding-top: 10px;
 	color:white;
 }
-.assignmentbox {
+div.assignmentbox {
 	height:200;
-	width:800;
-	background-color:black;
+	width:300;
+	background-color:#434343;
 }
