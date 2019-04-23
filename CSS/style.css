@@ -16,7 +16,7 @@ div.thebig {
 	margin-top: 150px;
 	
 }
-div.content {
+.content {
 	padding-top: 50px;
 	padding-left: 70px;
 }
@@ -126,8 +126,16 @@ h2 {
 	padding-top: 10px;
 	color:white;
 }
-div.assignmentbox {
+.assignmentbox {
 	height:200;
 	width:300;
 	background-color:#434343;
+}
+
+.pst2 {
+	width: 900px;
+}
+.content2 {
+	padding-left: 70px;
+	padding-top: 10px;
 }

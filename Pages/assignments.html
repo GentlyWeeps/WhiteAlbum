@@ -20,26 +20,36 @@
 						<h1>Assignments</h1>
 						<div class="divider"></div>
 						<div class="pst">
-								<p>This page is where all my assignments will be posted</p>
+							<div class="assignmentbox">
+								<div class="content2">
+										<div class="pst2">
+											<h1>Functions</h1>
+													<br>
+														<button onclick="largerNumber()">Assignment 1</button><p>Larger Number: This program prompts the user for 2 numbers and alerts the larger one</p>
+													<br>
+														<button onclick="productNegative()">Assignment 2</button><p>Negative Product: This program prompts the user for 2 numbers and alerts the if the sum is negative of positive</p>
+													<br>
+														<button onclick="order()">Assignment 3</button><p>Order: This program will place 4 numbers that are input into ascending order </p>
+												<br>
+										</div>
+								</div>
+							</div>
+						<br><br><br>
 						<div class="assignmentbox">
-						<h1>Functions</h1>
-								<br>
-									<button onclick="largerNumber()">Assignment 1</button><p>Larger Number: This program prompts the user for 2 numbers and alerts the larger one</p>
-								<br>
-									<button onclick="productNegative()">Assignment 2</button><p>Negative Product: This program prompts the user for 2 numbers and alerts the if the sum is negative of positive</p>
-								<br>
-									<button onclick="order()">Assignment 3</button><p>Order: This program will place 4 numbers that are input into ascending order </p>
-							<br>
-						</div>
-						<div>
-						<div class="assignmentbox">
-							<h1>JS Loops</h1>
-							<button onclick="pattern()">Assignment 4</button><p>Patter: This program prompts the user for a string to make the pattern with and the number of rows. The output is displayed in the console</p>
-							<br>
-							<button onclick="guess()">Assignment 5</button><p>Guess Game: This program will give you a number to guess, and provide feedback to adjust the value to guess the right number<p> 
+							<div class="content2">
+								<div class="pst2">
+									<h1>JS Loops</h1>
+										<button onclick="pattern()">Assignment 4</button><p>Patter: This program prompts the user for a string to make the pattern with and the number of rows. The output is displayed in the console</p>
+									<br>
+										<button onclick="guess()">Assignment 5</button><p>Guess Game: This program will give you a number to guess, and provide feedback to adjust the value to guess the right number</p><br>
+										<p id="gusses"></p>
+									<br><br>
+								</div>
+							</div>
 						</div>
 						<br>
 						<button onclick="list()">Assignment 6</button>
+						<p id="l"></p>
 						<br>
 						</div>
 						<button>Assignment 7</button>
@@ -63,20 +73,23 @@
 		<script>
 			function guess()
 			{
-				var num1   = 13;
-				var guess = parseInt(prompt("I'm thinking of a number"));
-		    	while(true) {
-		    		if(guess==num1) {
-		    			window.alert("You got it");
-		    			break;	
-		    		}
-		    		if(guess>num1) {
-		    			var guess = parseInt(prompt("The number is lower"));
-		    		}
-		    		if(guess<num1) {
-		    			var guess = parseInt(prompt("The number is higher"));
-		    		}
-		    	}		
+				var num1   = Math.floor(Math.random()*100);
+				var guesslist = []
+				var guess = parseInt(prompt("I'm thinking of a number between 0 - 100"));
+			    	while(true) {
+			    		guesslist.push(guess)
+			    		document.getElementById("gusses").innerHTML = "You took " + guesslist.length + " guesses";
+			    		if(guess==num1) {
+			    			window.alert("You got it");
+			    			break;	
+			    		}
+			    		if(guess>num1) {
+			    			var guess = parseInt(prompt("The number is lower"));
+			    		}
+			    		if(guess<num1) {
+			    			var guess = parseInt(prompt("The number is higher"));
+			    		}
+			    	}		
 			}
 			function pattern() 
 			{
@@ -89,7 +102,12 @@
 			function list() {
 				var list1=[];
 				var user="";
-				while()
+				items = parseInt(prompt("How many Items"))
+				while(list1.length<items) {
+					user = (prompt("What item do you want to add"))
+					list1.push(user)
+					}
+				document.getElementById("l").innerHTML = list1;
 			}
 		</script>
 	</body>
