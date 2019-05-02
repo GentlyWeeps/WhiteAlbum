@@ -39,7 +39,7 @@
 							<div class="content2">
 								<div class="pst2">
 									<h1>JS Loops</h1>
-										<button class="assbox" onclick="pattern()">Assignment 4</button><p>Patter: This program prompts the user for a string to make the pattern with and the number of rows. The output is displayed in the console</p>
+										<button class="assbox" onclick="pattern()">Assignment 4</button><p>Pattern: This program prompts the user for a string to make the pattern with and the number of rows. The output is displayed in the console</p><p id="s"></p>
 									<br>
 										<button class="assbox" onclick="guess()">Assignment 5</button><p>Guess Game: This program will give you a number to guess, and provide feedback to adjust the value to guess the right number</p><br>
 										<p id="gusses"></p>
@@ -48,14 +48,22 @@
 							</div>
 						</div>
 						<br>
-						<button class="assbox" onclick="list()">Assignment 6</button>
-						<p id="l"></p>
-						<br>
-						</div>
-						<button class="assbox">Assignment 7</button>
-						<br>
-						<button class="assbox">Assignment 8</button>
-						<br>
+						<div class="assignmentbox">
+							<div class="content2">
+								<div class="pst2">
+									<h1>String Manipulation and Arrays </h1>
+									<button class="assbox" onclick="list()">Assignment 6</button>
+										<p id="l"></p>
+											<br>
+												</div>
+												<button class="assbox" onclick="stringM()">Assignment 7</button>
+												<p id="t"></p>
+											<br>
+										<button class="assbox">Assignment 8</button>
+									<br>
+								</div>
+							</div>
+						</div>	
 					</div>
 				</div>
 			</div>
@@ -96,7 +104,7 @@
 				var rows = parseInt(prompt("How many rows?"));
 				var symbol = prompt("what Symbol do you want to repeat?");
 				for(i=0;i<rows;i++) {
-					console.log(symbol.repeat(rows));
+					document.getElementById("s").innerHTML = symbol.repeat(rows)+ "\n";
 				}
 			}
 			function list() {
@@ -107,7 +115,52 @@
 					user = (prompt("What item do you want to add"))
 					list1.push(user)
 					}
-				document.getElementById("l").innerHTML = list1;
+				document.getElementById("l").innerHTML = (list1 + " \n");
+			}
+			function stringM() {	
+				var input = prompt("What text do you want to manipulate?")
+				var method = parseInt(prompt("What do you want to do to the text? (Enter the number) \n 1. Lowercase \n 2. Upper case \n 3. Alertating Upper Case \n 4. Opposite case "))
+				if(method == 1) {
+					var newtext = input.toLowerCase()
+					document.getElementById("t").innerHTML = newtext;
+					}
+				if(method == 2) {
+					var newtext = input.toUpperCase()
+					document.getElementById("t").innerHTML = newtext;
+					}
+				if(method == 3) {
+					var newtextlist = input.split("")
+					var len = newtextlist.length
+					document.getElementById("t").innerHTML = newtextlist 
+					for(i=0;i<len;i=+2){
+						var cee = newtextlist[i]
+							if(cee == cee.toLowerCase()) {
+								document.getElementById("t").innerHTML = cee.toLocaleUpperCase();
+							}		
+					}
+				}
+				if(method == 4) {
+					var newtextlist = input.split("")
+					var len = newtextlist.length 
+					for(i=0;i<len;i++) {
+						var cee = newtextlist[i] 
+						if(cee == cee.toUpperCase()) {
+							document.getElementById("t").innerHTML = cee.toLocaleLowerCase();
+						}
+						if(cee == cee.toLowerCase()) {
+							document.getElementById("t").innerHTML = cee.toLocaleUpperCase();
+						}
+					}
+				}
+				if(method==5) {
+					var len = input.length 
+					for(i=0;i<len;i=+2) {
+						console.log(input.charAt(2))
+						if(input.charAt(i) == input.chartAt(i).toLowerCase()) {
+							document.getElementById("t").innerHTML = input.chartAt(i).toUpperCase();
+						}
+					}
+				}
 			}
 		</script>
 	</body>
