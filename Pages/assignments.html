@@ -128,17 +128,32 @@
 					var newtext = input.toUpperCase()
 					document.getElementById("t").innerHTML = newtext;
 					}
-				if(method == 3) {
-					var newtextlist = input.split("")
-					var len = newtextlist.length
-					document.getElementById("t").innerHTML = newtextlist 
-					for(i=0;i<len;i=+2){
-						var cee = newtextlist[i]
-							if(cee == cee.toLowerCase()) {
-								document.getElementById("t").innerHTML = cee.toLocaleUpperCase();
-							}		
+				if(method==3) {
+					var len = input.length 
+					var inpt = input
+					var neword = ""
+					for(i=0;i<len;i++) {
+							if(i%2==1) {
+									var hijef = inpt.charAt(i)
+									var uneven = hijef.toLowerCase();
+									neword = neword+uneven;
+									document.getElementById("t").innerHTML = neword;
+							}
+							if(i%2==0){
+								if(inpt.charAt(i) == (inpt.charAt(i)).toLowerCase()) {
+									var hijef = inpt.charAt(i)
+									var even = hijef.toUpperCase();
+									neword = neword+even
+									document.getElementById("t").innerHTML = neword;
+									//document.getElementById("t").innerHTML = (inpt.charAt(i)).toUpperCase();
+								}
+								if(inpt.charAt(i) == (inpt.charAt(i)).toUpperCase()) {
+									neword = neword+even
+									document.getElementById("t").innerHTML = neword;
+									//document.getElementById("t").innerHTML = (inpt.charAt(i)).toUpperCase();
+								}
+							}
 					}
-				}
 				if(method == 4) {
 					var newtextlist = input.split("")
 					var len = newtextlist.length 
@@ -152,14 +167,7 @@
 						}
 					}
 				}
-				if(method==5) {
-					var len = input.length 
-					for(i=0;i<len;i=+2) {
-						console.log(input.charAt(2))
-						if(input.charAt(i) == input.chartAt(i).toLowerCase()) {
-							document.getElementById("t").innerHTML = input.chartAt(i).toUpperCase();
-						}
-					}
+
 				}
 			}
 		</script>
