@@ -53,13 +53,15 @@
 								<div class="pst2">
 									<h1>String Manipulation and Arrays </h1>
 									<button class="assbox" onclick="list()">Assignment 6</button>
-										<p id="l"></p>
+										<p id="l"></p><p>This function takes the input and adds it to a list, and prints the list as a p element</p>
 											<br>
 												</div>
-												<button class="assbox" onclick="stringM()">Assignment 7</button>
-												<p id="t"></p>
+												<button class="assbox" onclick="stringM()">Assignment 7</button> 
+												<p id="t"></p><p>This function has multiple purposes</p>
 											<br>
-										<button class="assbox">Assignment 8</button>
+										<button class="assbox" onclick="password()">Assignment 8</button><p>This button calls a function that will verify an input "username" and "password", the case does not matter.</p><br>
+											<br>
+										<button class="assbox" onclick="crypto()">Assignment 9</button><p></p><br>
 									<br>
 								</div>
 							</div>
@@ -74,10 +76,10 @@
 				</a>
 			</div>
 		<br><br>
-		<div class="foot">
+<!--		<div class="foot">
 			<p class="footer" style="float:left;">Siddarth K</p>
 			<p class="footer" style="float:right;">Contact information: 721449@pdsb.net</p>
-		</div>
+		</div> -->
 		<script>
 			function guess()
 			{
@@ -168,6 +170,41 @@
 					}
 				}
 
+				}
+			}
+			function password() {
+				userName = prompt("What is the top secret username")
+				passW = prompt("What is the top secret password")
+				checkU = userName.toUpperCase()
+				checkP = passW.toUpperCase()
+				realP = "MYNAMEJEFF"
+				realU = "JEFF"
+				while(checkU != realU || checkP!=realP) {
+					if(checkU==realU && checkP==realP) {
+						alert("True")
+						break;
+					}
+					if(checkU != realU) {
+						checkU = (prompt("False \nPlease enter a valid username")).toUpperCase()
+					}
+					if(checkP != realP) {
+						checkP = (prompt("False \nPlease enter a valid password")).toUpperCase()
+					}
+				}
+			}
+			function crypto() {
+				var original = prompt("What is the text?")
+				var li = original.split(" ")
+				var Llength= li.length	
+				var word = []
+				var pigWord =""
+				for(var i=0;i<=Llength;i++) { 
+					var y = li.splice(i-1,1)
+					var x = li.splice(i+1,1)
+					for(var d=0;d<=x.length;d++) {
+						var h = x[d]
+						console.log(h.charCodeAt(0))
+					}
 				}
 			}
 		</script>
