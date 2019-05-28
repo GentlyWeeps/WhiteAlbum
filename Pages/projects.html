@@ -4,6 +4,10 @@
 		<title>Siddarth's Assignments</title>
 		<link rel="stylesheet" type="text/css" href="../CSS/style.css">
 		<link rel="stylesheet" type="text/css" href="../CSS/animations.css">
+	<style>
+		* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+	</style>
 	</head>
 	<body class="parallax">
 			<ul class="nav">
@@ -11,7 +15,7 @@
 				<div class="navan"></div><li><a href="../index.html">Home</a></li>
 				<li><a href="../Pages/assignments.html">Assignments</a></li>
                 <li><a href="../Pages/aboutme.html">About Me</a></li>
-				<li><a href="../Pages/projects.html">Cool Stuff</a></li>
+				<li><a href="../Pages/projects.html">Graphics</a></li>
 				<li><a href="../Pages/feedback.html">Feedback</a></li>
 				<li><a href="../Pages/Encrypt.html">Encrypt</a></li>
 			</ul>
@@ -31,13 +35,20 @@
 										</div>
 									</div>
 								<div class="divider"></div>
-									<div class="assignmentbox">
+									<div class="assignmentbox" style="background-color: white">
 										<div class="content2">
 											<div class="pst2">
 												<h2></h2>
-												<div class="clac">
-													<div class="display"></div>
-													<button class="calc"onclick="colour()"></button><button class="calc"></button><button class="calc"></button>
+												<div >
+													<h1>Canvas</h1>
+													<button onclick="bruh()">Draw</button>
+													<canvas id="myCanvas" width="500" height="300"></canvas>
+													</div>
+													<br>
+												<h1>Clock</h1>
+													<button onclick="clock()">Draw</button>
+													<canvas id="glock" width="500" height="500" style="background-color: #333"></canvas>
+													<img id="bruh2" width="0" height="0" src="../Images/monkey.jpg">
 												</div>
 											</div>
 										</div>
@@ -57,9 +68,33 @@
 			<p class="footer" style="float:right;">Contact information: 721449@pdsb.net</p>
 		</div>
 		<script>
-			function colour() {
 
+			function bruh() {
+				var canvas = document.getElementById("myCanvas");
+				var ctx = canvas.getContext("2d");
+				ctx.fillStyle = "#6DB8E8";
+				ctx.fillRect(0, 0, 500, 300);
+				ctx.moveTo(0, 0);
+				ctx.lineTo(200, 100);
+				ctx.stroke();
 			}
+		function clock() {
+			var canvas = document.getElementById("glock");
+			var ctx = canvas.getContext("2d");
+			var radius = canvas.height/2;	
+			ctx.translate(radius, radius)
+			radius = radius * 0.90
+		drawClock();
+		function drawClock() {
+			ctx.arc(0, 0, radius, 0 , 2 * Math.PI);
+			ctx.fillStyle = "#9FFFAB";
+			ctx.fill();
+			var img = document.getElementById("bruh2");
+			ctx.drawImage(img, -200, -150) 
+
+
+		}
+}
 		</script>	
 	</body>
 <html>
