@@ -42,17 +42,32 @@
 												<div >
 													<h1>Canvas</h1>
 													<button onclick="bruh()">Draw</button>
-													<canvas id="myCanvas" width="500" height="300"></canvas>
+													<canvas id="Can" width="500" height="300"></canvas>
 													</div>
 													<br>
 												<h1>Clock</h1>
 													<button onclick="clock()">Draw</button>
 													<canvas id="glock" width="500" height="500" style="background-color: #333"></canvas>
-													<img id="bruh2" width="0" height="0" src="../Images/monkey.jpg">
+													<img id="bruh2" width="0" height="0" src="../Images/monkey.png">
+													<br>
+													<br>
+												</div>
+											</div>
+										</div>
+										<div class="divider"></div>
+										<br><br>
+										<div class="gradbar"><div class="white"></div></div>
+									<div class="assignmentbox" style="background-color: white">
+										<div class="content2">
+											<div class="pst2">
+												<h2>Breakout</h2>
+												<div>
+													<canvas id="myCanvas" width="480" height="320"></canvas>
 												</div>
 											</div>
 										</div>
 									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -68,9 +83,42 @@
 			<p class="footer" style="float:right;">Contact information: 721449@pdsb.net</p>
 		</div>
 		<script>
+		var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+		var ballRadius = 10;
+		var x = canvas.width/2;
+		var y = canvas.height-30;
+		var dx = 2;
+		var dy = -2;
 
-			function bruh() {
-				var canvas = document.getElementById("myCanvas");
+		function drawBall() {
+		    ctx.beginPath();
+		    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+		    ctx.fillStyle = "#0095DD";
+		    ctx.fill();
+		    ctx.closePath();
+		}
+
+		function draw() {
+		    ctx.clearRect(0, 0, canvas.width, canvas.height);
+		    drawBall();
+		    
+		    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+		        dx = -dx;
+		    }
+		    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+		        dy = -dy;
+		    }
+		    
+		    x += dx;
+		    y += dy;
+		}
+
+		setInterval(draw, 10);
+
+
+		function bruh() {
+				var canvas = document.getElementById("Can");
 				var ctx = canvas.getContext("2d");
 				ctx.fillStyle = "#6DB8E8";
 				ctx.fillRect(0, 0, 500, 300);
@@ -90,9 +138,7 @@
 			ctx.fillStyle = "#9FFFAB";
 			ctx.fill();
 			var img = document.getElementById("bruh2");
-			ctx.drawImage(img, -200, -150) 
-
-
+			ctx.drawImage(img, -200, -150,400,400)
 		}
 }
 		</script>	
